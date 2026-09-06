@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EXITLEFT CHRISTMAS · 21-23 December · Playhouse Theatre | Exitleft Productions</title>
+<link rel="icon" type="image/x-icon" href="https://exitleftshows.com/images/Exitleft%20Productions%20flavicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d0e10;
+    --chalk:#002C28;
+    --paper:#f2ead9;
+    --paper-line:#d8cbb0;
+    --marker:#2fab3f;
+    --amp:#7b112b;
+    --cream:#f5f2ec;
+    --muted:#a9a196;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--cream);
+    font-family:'Work Sans',sans-serif;
+    font-size:16px;
+    line-height:1.5;
+  }
+  h1,h2,h3{
+    font-family:'Anton',sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    margin:0;
+  }
+  .marker{
+    font-family:'Permanent Marker',cursive;
+    text-transform:none;
+    letter-spacing:0;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .torn{
+    position:relative;
+    width:100%;
+    height:28px;
+    overflow:hidden;
+    display:block;
+  }
+  .torn svg{width:100%;height:100%;display:block;}
+
+  /* ---- NAV ---- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(13,14,16,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(245,242,236,0.08);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1100px;margin:0 auto;
+  }
+  .nav .brand{
+    display:flex;align-items:center;gap:8px;
+  }
+  .nav .brand img{
+    height:54px;width:auto;display:block;
+  }
+  .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:0.92rem;}
+  .nav a{text-decoration:none;opacity:0.85;}
+  .nav a:hover{opacity:1;color:#ffffff;}
+  .nav .book-btn{
+    background:var(--marker);color:var(--ink);padding:9px 18px;
+    font-weight:700;text-decoration:none;border-radius:var(--radius);
+    font-size:0.88rem;
+  }
+  @media(max-width:720px){ .nav ul{display:none;} }
+
+  /* ---- HERO ---- */
+  .hero{
+    position:relative;
+    padding:88px 24px 60px;
+    background:
+      linear-gradient(rgba(13,14,16,0.35),rgba(13,14,16,0.72)),
+      radial-gradient(ellipse at 70% 0%, rgba(209,53,43,0.22), transparent 55%),
+      radial-gradient(ellipse at 10% 100%, rgba(244,196,48,0.10), transparent 50%),
+      url("https://exitleftshows.com/images/Christmas-background.jpg") center center / cover no-repeat,
+      var(--ink);
+    overflow:hidden;
+  }
+  .hero-content{
+    max-width:1100px;margin:0 auto;position:relative;z-index:2;
+    display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;
+  }
+  .hero-inner{position:relative;}
+  .hero-media{
+    position:relative;
+    display:flex;align-items:center;justify-content:center;
+    overflow:visible;
+  }
+  .hero-media img{
+    /* show the image at 40% width (no circular crop) and rotate */
+    width:80%;max-width:80%;height:auto;object-fit:contain;display:block;
+    border-radius:0;
+    box-shadow:0 0 60px rgba(0, 0, 0, 0.25);
+    transform:rotate(-5deg);
+    transform-origin:center center;
+  }
+  @media(max-width:900px){
+    .hero-content{grid-template-columns:1fr;}
+    .hero-media{order:-1;}
+    .hero-media img{width:80%;max-width:80%;height:auto;transform:rotate(-5deg);}
+  }
+  .eyebrow{
+    font-size:0.85rem;color:var(--muted);margin-bottom:10px;
+  }
+  .hero h1{
+    font-size:clamp(3rem,9vw,6.2rem);
+    line-height:0.92;
+    color:var(--cream);
+  }
+  .hero h1 span{
+    display:block;color:var(--marker);
+    text-shadow:3px 3px 0 #042f16, 6px 6px 0 rgba(0,0,0,0.2);
+  }
+  .hero .sub{
+    font-family:'Oregano';
+    color:#2fab3f;
+    font-size:1.7rem;
+    margin-top:14px;
+    display:inline-block;
+    transform:rotate(-2deg);
+  }
+  .hero .lede{
+    max-width:52ch;margin-top:24px;color:#d8d2c6;font-size:1.05rem;
+  }
+  .hero .meta-line{
+    margin-top:18px;color:var(--muted);font-size:0.95rem;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:14px 26px;text-decoration:none;
+    font-weight:700;border-radius:var(--radius);font-size:0.95rem;
+    border:1px solid transparent;
+  }
+  .btn.primary{background:var(--amp);color:var(--cream);}
+  .btn.primary:hover{background:#2fab3f;}
+  .btn.ghost{border-color:rgba(245,242,236,0.35);color:var(--cream);}
+  .btn.ghost:hover{border-color:var(--marker);color:var(--marker);}
+
+  .hero-strip{
+    margin-top:56px;
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:rgba(245,242,236,0.12);
+    border-top:1px solid rgba(245,242,236,0.12);
+    border-bottom:1px solid rgba(245,242,236,0.12);
+  }
+  .hero-strip div{
+    background:var(--ink);padding:20px 16px;
+  }
+  .hero-strip .num{font-family:'Anton',sans-serif;font-size:1.6rem;color:var(--marker);display:block;}
+  .hero-strip .lbl{font-size:0.82rem;color:var(--muted);margin-top:4px;}
+  @media(max-width:720px){ .hero-strip{grid-template-columns:repeat(2,1fr);} }
+
+  /* ---- SECTION HEADS ---- */
+  section{padding:80px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head .kicker{font-family:'Oregano';color:var(--amp);font-size:1.7rem;transform:rotate(-1.5deg);display:inline-block;}
+  .section-head h2{font-size: clamp(2.1rem,5vw,3.4rem);margin: 14px 0 22px;line-height: 1.05;color:#7B122B;}
+  section.on-paper{background:var(--paper);color:var(--ink);}
+  section.on-paper .section-head .kicker{color:var(--amp);}
+  section.on-paper .muted{color:hsl(35, 11%, 38%);}
+
+  /* ---- SHOWTIMES (ticket stubs) ---- */
+  #sessions{background:var(--ink);}
+  .tickets{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:18px;
+  }
+  .ticket{
+    background:#042f16;
+    border:1px dashed rgba(245,242,236,0.25);
+    border-radius:var(--radius);
+    padding:22px 20px;
+    position:relative;
+  }
+  .ticket.featured{border-color:var(--marker);background:#671250;}
+  .ticket .tag{
+    font-size:0.72rem;letter-spacing:0.03em;color:var(--marker);
+    margin-bottom:10px;font-weight:700;
+  }
+  .ticket .day{font-family:'Anton',sans-serif;font-size:1.9rem;}
+  .ticket .date{color:var(--muted);font-size:0.9rem;margin-top:2px;}
+  .ticket .time{margin-top:14px;font-size:1.4rem;font-weight:700;color:var(--marker);}
+  .ticket .note{margin-top:6px;font-size:0.85rem;color:#c9c2b6;min-height:1.2em;}
+  .ticket a.book{
+    display:inline-block;margin-top:18px;padding:9px 16px;
+    background:var(--amp);color:var(--cream);text-decoration:none;
+    font-weight:700;font-size:0.85rem;border-radius:var(--radius);
+  }
+  .ticket a.book:hover{background:#2fab3f;}
+  .ticket a.book:hover{color:#000000;}
+  .tickets-note{margin-top:20px;color:var(--muted);font-size:0.88rem;}
+
+  /* ---- ABOUT ---- */
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:start;}
+  @media(max-width:820px){ .about-grid{grid-template-columns:1fr;} }
+  .about-grid p{max-width:56ch;}
+  .stat-row{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .stat-row div{border-left:3px solid var(--amp);padding-left:14px;}
+  .stat-row b{display:block;font-family:'Anton',sans-serif;font-size:1.5rem;}
+  .stat-row span{font-size:0.82rem;color:#6b6255;}
+  blockquote.pullquote{
+    font-family:'Oregano';
+    font-size:1.5rem;line-height:1.7;color:var(--ink);
+    border-left:4px solid var(--marker);
+    padding-left:20px;margin:0;transform:rotate(-0.6deg);
+  }
+
+  /* video/reel panel */
+  .reel-panel{
+    background:var(--ink);color:var(--cream);
+    border-radius:var(--radius);
+    padding:26px;
+  }
+  .reel-panel video{width:100%;border-radius:var(--radius);background:#000;}
+  .reel-panel .cap{font-size:0.85rem;color:var(--muted);margin-top:10px;}
+
+  /* ---- FAQ (notebook) ---- */
+  #faq{background:#eedfbe;color:var(--ink);}
+  .faq-list{
+    background:var(--paper);
+    border:1px solid var(--paper-line);
+    border-radius:var(--radius);
+  }
+  .faq-item{border-bottom:1px solid var(--paper-line);}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;
+    padding:20px 22px;font-size:1.05rem;font-weight:600;
+    cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+    color:var(--ink);font-family:'Work Sans',sans-serif;
+  }
+  .faq-q .plus{font-family:'Anton',sans-serif;color:var(--amp);font-size:1.3rem;transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;}
+  .faq-a p{margin:0 22px 20px;color:#4a4237;max-width:60ch;}
+
+  /* ---- LEGACY / COMPANY ---- */
+  #company{background:var(--ink);}
+  .company-band{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:rgba(245,242,236,0.12);
+    border-top:1px solid rgba(245,242,236,0.12);
+    border-bottom:1px solid rgba(245,242,236,0.12);
+    margin-top:36px;
+  }
+  .company-band div{background:var(--ink);padding:28px 20px;text-align:center;}
+  .company-band b{display:block;font-family:'Anton',sans-serif;font-size:2rem;color:var(--marker);}
+  .company-band span{font-size:0.85rem;color:var(--muted);}
+  @media(max-width:720px){ .company-band{grid-template-columns:1fr;} }
+
+  /* ---- FINAL CTA ---- */
+  .final-cta{
+    background:linear-gradient(135deg,var(--amp),#510020);
+    padding:90px 24px;text-align:center;
+  }
+  .final-cta .kicker{font-family:'Oregano';font-size:1.7rem;transform:rotate(-1.5deg);display:inline-block;}
+  .final-cta h2{font-size:clamp(2.1rem,5vw,3.4rem);max-width:16ch;margin:14px auto 22px;line-height:1.05;}
+  .final-cta .btn.primary{background:var(--ink);}
+  .final-cta .btn.primary:hover{background:#000;}
+
+  /* ---- FOOTER ---- */
+  footer{background:#042f16;padding:56px 24px 30px;font-size:0.88rem;color:var(--muted);}
+  .foot-grid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .foot-brand{font-family:'Anton',sans-serif;font-size:1.15rem;color:var(--cream);}
+  .foot-social{display:flex;gap:16px;margin-top:14px;}
+  .foot-social a{text-decoration:underline;}
+  .foot-legal{margin-top:36px;border-top:1px solid rgba(245,242,236,0.1);padding-top:20px;line-height:1.7;}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:20px;}
+  .foot-bottom a{margin-right:16px;text-decoration:none;opacity:0.8;}
+  .foot-bottom a:hover{opacity:1;}
+
+  ::selection{background:var(--marker);color:var(--ink);}
+  :focus-visible{outline:2px solid var(--marker);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="exitleftshows.com" class="brand"><img src="https://exitleftshows.com/images/Exitleft%20Productions%20EDM%20header%20White%20square.png" alt="ExitLeft Productions"></a>
+    <ul>
+      <li><a href="#sessions">Showtimes</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="book-btn" href="https://tickets.playhouse.org.au/sales/salesevent/168946">Book now</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-inner">
+        <div class="eyebrow">An Exitleft Concert</div>
+        <h1><span>A VERY EXITLEFT CHRISTMAS</span></h1>
+        <div class="sub">Christmas is coming, and we’re making it merry, musical and magical!</div>
+        <p class="lede">Get ready to celebrate the most wonderful time of the year with A Very ExitLeft Christmas, a spectacular collection of Christmas songs performed by ExitLeft’s talented young performers at the Playhouse Theatre.</p>
+        <div class="meta-line">21–23 December · The Playhouse Theatre, Hobart</div>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#sessions">View times</a>
+          <a class="btn ghost" href="#about">About the show</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="https://exitleftshows.com/images/XMAS%20-website.jpg" alt="A Very ExitLeft Christmas key art">
+      </div>
+    </div>
+
+    <div class="hero-strip wrap" style="max-width:1100px;margin:56px auto 0;padding:0;">
+      <div><span class="num">6</span><span class="lbl">Check showtimes for performer details</span></div>
+      <div><span class="num"> 75 min | 40 min</span><span class="lbl">No interval</span></div>
+      <div><span class="num">2+</span><span class="lbl">Age recommendation</span></div>
+      <div><span class="num">224</span><span class="lbl">Seats a night</span></div>
+    </div>
+  </section>
+
+  <section id="sessions">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Pick your night</span>
+        <h2>Showtimes</h2>
+        <p class="muted" style="color:var(--muted)">Kick off the holiday season. When booking, please check that you have selected the correct concert time:</p>
+      </div>
+
+      <div class="tickets">
+        <div class="ticket">
+          <div class="tag">Runtime 75 min</div>
+          <div class="day">Mon</div>
+          <div class="date">21 December</div>
+          <div class="time">5:00 PM</div>
+          <div class="note">Performed by Monday and Thursday (Gr3-12) Accelerate and Blaze Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+        <div class="ticket">
+          <div class="tag">Runtime 75 min</div>
+          <div class="day">Mon</div>
+          <div class="date">21 December</div>
+          <div class="time">7:00 PM</div>
+          <div class="note">Performed by Monday and Thursday (Gr3-12) Accelerate and Blaze Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+        <div class="ticket">
+          <div class="tag">Runtime 75 min</div>
+          <div class="day">Tue</div>
+          <div class="date">22 December</div>
+          <div class="time">5:00 PM</div>
+          <div class="note">Performed by Tuesday and Friday (Gr3-12) Accelerate and Blaze Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+        <div class="ticket">
+          <div class="tag">Runtime 75 min</div>
+          <div class="day">Tue</div>
+          <div class="date">22 December</div>
+          <div class="time">7:00 PM</div>
+          <div class="note">Performed by Tuesday and Friday (Gr3-12) Accelerate and Blaze Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+        <div class="ticket">
+          <div class="tag">Runtime 40 min</div>
+          <div class="day">Wed</div>
+          <div class="date">23 December</div>
+          <div class="time">5:00 PM</div>
+          <div class="note">Performed by all (K-2) Ignite Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+          <div class="ticket">
+          <div class="tag">Runtime 40 min</div>
+          <div class="day">Wed</div>
+          <div class="date">23 December</div>
+          <div class="time">6:15 PM</div>
+          <div class="note">Performed by all (K-2) Ignite Performers</div>
+          <a class="book" href="https://tickets.playhouse.org.au/sales/salesevent/168946" target="_blank" rel="noopener">Book now</a>
+        </div>
+      </div>
+      <p class="tickets-note">Tickets via TicketSearch · The Playhouse, 106 Bathurst St, Hobart</p>
+    </div>
+  </section>
+
+  <section id="about" class="on-paper">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">About the show</span>
+        <h2>packed with music, laughter and a whole</br> lot of festive cheer!</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p>From festive favourites and Christmas classics to modern holiday hits, our performers will fill the theatre with soaring vocals, joyful harmonies, big performances and plenty of Christmas spirit.</p>
+          <p>Whether you're looking for a little extra Christmas magic, a festive family outing, or simply an excuse to sing along to your favourite Christmas songs, A Very ExitLeft Christmas is the perfect way to kick off the holiday season.</p>
+          <div class="stat-row">
+            <div><b>75 min | 40 min</b><span>Runtime</span></div>
+            <div><b>0</b><span>Interval</span></div>
+            <div><b>2+</b><span>Recommended for</span></div>
+          </div>
+          <a class="btn primary" style="margin-top:32px;" href="https://tickets.playhouse.org.au/sales/salesevent/168946">Book now</a>
+        </div>
+        <div>
+          <blockquote class="pullquote">"Oh, what fun it is to ride In a one horse open sleigh."</blockquote>
+          <div class="reel-panel" style="margin-top:28px;">
+            <video controls preload autoplay loop muted="yes" poster="">
+              <source src="https://exitleftshows.com/videos/Onsale%20-%20Very%20Christmas.mp4" type="video/mp4">
+              Your browser doesn't support embedded video.
+            </video>
+            <div class="cap">"Have yourself a merry little Christmas."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Before you book</span>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">What are the ticket prices?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Adult $35, Concession $32, Student $25</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Where is it on? <span class="plus">+</span></button>
+          <div class="faq-a"><p>The Playhouse Theatre, 106 Bathurst Street, Hobart</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Which performance should I book for? <span class="plus">+</span></button>
+          <div class="faq-a"><p>When booking, please check that you have selected the correct concert time: <p>
+<b>Monday 21 December, 5pm & 7pm</b><br>
+Performed by Monday and Thursday (Gr3-12) Accelerate and Blaze Performers (Runtime: approximately 75 minutes with no interval. All Accelerate and Blaze performers will be appearing in both sessions.)<p>
+
+
+<b>Tuesday 22 December, 5pm & 7pm</b><br>
+Performed by Tuesday and Friday (Gr3-12) Accelerate and Blaze Performers
+(Runtime: approximately 75 minutes with no interval. All Accelerate and Blaze performers will be appearing in both sessions.)<p>
+
+
+<b>Wednesday 23 December, 5pm & 6:15pm</b><br>
+Performed by all (K-2) Ignite Performers
+(Runtime: approximately 40 minutes with no interval. All Ignite performers will be appearing in both sessions.)<p>
+
+</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is it suitable for kids? <span class="plus">+</span></button>
+          <div class="faq-a"><p>The concert is suitable for ages 2+. </p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Babes in arms policy<span class="plus">+</span></button>
+          <div class="faq-a"><p>All persons entering the theatre, regardless of age, must have a ticket. Even though our amplified sound is at comfortable levels for young people and adults, for health and safety reasons we advise that this performance is not suitable for children under 2 years.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <span class="kicker">Celebrate with us</span>
+    <h2>Its beginning to look a lot like Christmas!</h2>
+    <p style="max-width:44ch;margin:0 auto 30px;">"It's the most wonderful time of the year" </p>
+    <a class="btn primary" href="https://tickets.playhouse.org.au/sales/salesevent/168946">Book now</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">ExitLeft Productions</div>
+        <p style="margin-top:8px;">Level 1, 46 Murray Street, Hobart TAS 7000</br>
+         Email: <a href="mailto:info@exitleft.com.au">info@exitleft.com.au</a>  |  Phone: <a href="tel:+61408145898">0408 145 898</a>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/exitlefttasmania/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/exitlefttasmania/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@exitleft" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.youtube.com/user/ExitLeft1000" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+      <div>
+        <div class="foot-brand" style="font-size:1rem;">EXITLEFT CHRISTMAS</div>
+        <p style="margin-top:8px;">The Playhouse · 21-23 December</p>
+        <a class="btn primary" style="margin-top:12px;" href="#sessions">View times</a>
+      </div>
+    </div>
+
+    <div class="foot-legal">
+    </div>
+
+
+    <div class="foot-grid">
+     <div>
+        <div class="foot-brand"> <a href="/POLICYS/privacy.html">Privacy </a></div>
+      </div>
+       <div>
+       <div class="foot-brand" style="font-size:1rem;"><a>© 2026 ExitLeft Productions Pty Ltd</a></div>
+      </div>
+     </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(open){
+        if(open !== item){
+          open.classList.remove('open');
+          open.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        a.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
