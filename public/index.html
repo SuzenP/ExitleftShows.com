@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exitleft Shows</title>
+<link rel="icon" type="image/x-icon" href="https://exitleftshows.com/images/Exitleft%20Productions%20flavicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Paytone+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oregano:ital@0;1&family=Paytone+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oregano:ital@1&family=Paytone+One&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #000000;
+    --bg-elevated: #0a0a0a;
+    --ink: #ffffff;
+    --ink-dim: #8a8a8a;
+    --brass: #ffffff;
+    --hairline: rgba(255,255,255,0.12);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+  }
+
+  ::selection{ background: var(--brass); color: var(--bg); }
+
+  a{ color: inherit; }
+
+  header{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 96px 32px 56px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .eyebrow{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink-dim);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    margin-bottom: 22px;
+  }
+
+  .eyebrow span.line{
+    width: 28px;
+    height: 1px;
+    background: var(--brass);
+    display: inline-block;
+  }
+
+  h1{
+    font-family: 'Paytone One', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    margin: 0 0 22px;
+    max-width: 30ch;
+  }
+
+  h3{
+    font-family: 'Audiowide', sans-serif;
+    font-weight: 50;
+    line-height: 1.0;
+    margin: 0 0 22px;
+    max-width: 60ch;
+  }
+
+  header p{
+    max-width: 54ch;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink-dim);
+    margin: 0;
+  }
+
+  main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px 100px;
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 900px){
+    .gallery{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px){
+    .gallery{ grid-template-columns: 1fr; }
+    header{ padding: 64px 20px 40px; }
+    main{ padding: 36px 20px 72px; }
+  }
+
+  .frame{
+    display: block;
+    position: relative;
+    border-radius: 0;
+    overflow: hidden;
+    background: var(--bg-elevated);
+    text-decoration: none;
+    outline: none;
+  }
+
+  .frame img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 2560 / 1730;
+    object-fit: cover;
+    filter: saturate(0.94) contrast(1.02);
+    transition: transform 700ms cubic-bezier(.2,.7,.2,1);
+    will-change: transform;
+  }
+
+  .frame:hover img,
+  .frame:focus-visible img{
+    transform: scale(1.045);
+  }
+
+  .veil{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.92) 100%);
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 320ms ease, transform 320ms ease;
+  }
+
+  .frame:hover .veil,
+  .frame:focus-visible .veil{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .veil .tag{
+    font-size: 11px;
+    color: var(--brass);
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .veil .caption{
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    line-height: 1.35;
+    color: var(--ink);
+    margin: 0 0 4px;
+  }
+
+  .veil .meta{
+    font-size: 12px;
+    color: var(--ink-dim);
+  }
+
+  .frame:focus-visible{
+    box-shadow: 0 0 0 2px var(--brass);
+  }
+
+  footer{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+    color: var(--ink-dim);
+    font-size: 13px;
+    border-top: 1px solid var(--hairline);
+  }
+
+  footer a{
+    color: var(--ink);
+    border-bottom: 1px solid var(--hairline);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>SUMMER NIGHTS<br> ARE ABOUT TO<br> GET ELECTRIFYING</h1>
+  <h3>Exitleft's is bringing its 2026-27 season to the Playhouse Theatre, Hobart.</h3>
+</header>
+
+<main>
+  <div class="gallery" id="gallery"></div>
+</main>
+
+<footer>
+    <div class="foot-grid">
+     <div>
+       <div class="foot-brand" style="font-size:1rem;"><a>© 2026 ExitLeft Productions Pty Ltd</a></div> <br>
+       <div class="foot-social">
+       <div class="foot-brand"> <a href="https://exitleftshows.com/shows/privacy.html">Privacy </a></div>
+      </div>
+     </div>
+</footer>
+
+<script>
+  // Each entry: image (id controls a stable placeholder photo), caption text shown on hover,
+  // a short tag/location line, and the destination the click should open.
+  // Replace `href` with wherever each photo should actually send people.
+  const photos = [
+    { id: 1, tag: "GREASE", caption: "The ultimate Rock 'n' Roll musical is back!", href: "https://exitleftshows.com/shows/grease.html" },
+    { id: 2, tag: "PUFFS", caption: "Wildly funny. Wildly magical. The global hit comedy for anyone who never got a letter!", href: "https://exitleftshows.com/shows/puffs.html" },
+    { id: 3, tag: "Mattress & Crazy", caption: "You will be thoroughly entertained with these classic shows!", href: "https://exitleftshows.com/shows/mattress-and-crazy.html" },
+    { id: 4, tag: "PIRATE & ADDAMS", caption: "Two hilarious shows for the price of one!", href: "https://exitleftshows.com/shows/pirate-and-addams.html" },
+    { id: 5, tag: "Charlie and the Chocolate Factory", caption: "Come with me and you'll be in a world of pure imagination!!", href: "https://exitleftshows.com/shows/charlie-and-the-chocolate-factory.html" },
+    { id: 6, tag: "A VERY EXITLEFT CHRISTMAS", caption: "Christmas is coming, and we’re making it merry, musical and magical!", href: "https://exitleftshows.com/shows/a-very-exitleft-christmas.html" },
+  ];
+
+  const gallery = document.getElementById('gallery');
+
+  photos.forEach((p, i) => {
+    const a = document.createElement('a');
+    a.className = 'frame';
+    a.href = p.href;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.setAttribute('aria-label', p.caption);
+
+    const img = document.createElement('img');
+    img.src = `http://exitleftshows.com/images/${p.id}.jpg`;
+    img.alt = p.caption;
+    img.loading = 'lazy';
+
+    const veil = document.createElement('div');
+    veil.className = 'veil';
+    veil.innerHTML = `
+      <div>
+        <span class="tag">${p.tag}</span>
+        <p class="caption">${p.caption}</p>
+        <span class="meta">Click to view show→</span>
+      </div>
+    `;
+
+    a.appendChild(img);
+    a.appendChild(veil);
+    gallery.appendChild(a);
+  });
+</script>
+
+</body>
+</html>
