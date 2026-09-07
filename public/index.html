@@ -260,35 +260,6 @@
 </head>
 <body>
 
-<script>
-  // Ensure visitors reach the canonical host (www.exitleftshows.com) and force a cache-busting navigation.
-  (function () {
-    var canonicalHost = 'www.exitleftshows.com';
-    try {
-      var host = location.hostname;
-      // If visitor is on a non-canonical host, redirect them to the canonical host with a cache-busting query param.
-      if (host !== canonicalHost) {
-        var dest = location.protocol + '//' + canonicalHost + location.pathname + location.search + location.hash;
-        var sep = dest.indexOf('?') === -1 ? '?' : '&';
-        dest = dest + sep + 'r=' + Date.now();
-        // replace so we don't pollute history
-        location.replace(dest);
-        return;
-      }
-
-      // If on canonical host, ensure we request a fresh HTML / assets by adding a single cache-busting query param.
-      if (!location.search.includes('r=')) {
-        var sep2 = location.search ? '&' : '?';
-        var newUrl = location.protocol + '//' + location.host + location.pathname + location.search + sep2 + 'r=' + Date.now() + location.hash;
-        location.replace(newUrl);
-      }
-    } catch (e) {
-      // If anything goes wrong, fail silently — do not block page rendering.
-      console.error('Redirect script error', e);
-    }
-  })();
-</script>
-
 <header>
   <div class="logo-container">
     <a href="https://exitleftshows.com" class="logo">
