@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&family=Paytone+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oregano:ital@0;1&family=Paytone+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oregano:ital@1&family=Paytone+One&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -48,7 +49,7 @@
   }
   
   .logo img{
-    height: 60px;
+    height: 84px;
     width: auto;
     display: block;
   }
@@ -192,17 +193,67 @@
   }
 
   footer{
+    background: #000000;
+    padding: 56px 24px 30px;
+    color: var(--ink-dim);
+    font-size: 0.88rem;
+  }
+
+  .wrap{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 32px 80px;
-    color: var(--ink-dim);
-    font-size: 13px;
-    border-top: 1px solid var(--hairline);
+  }
+
+  .foot-grid{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .foot-brand{
+    font-family: 'Anton', sans-serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+
+  .foot-social{
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .foot-social a{ text-decoration: underline; }
+
+  .foot-legal{
+    margin-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    line-height: 1.7;
+  }
+
+  .footer-cta{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 16px;
+    background: var(--ink);
+    color: #042f16;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--ink);
+  }
+
+  .footer-cta:hover{
+    background: transparent;
+    color: var(--ink);
   }
 
   footer a{
     color: var(--ink);
-    border-bottom: 1px solid var(--hairline);
+  }
+
+  footer p{
+    margin-bottom: 0;
   }
 </style>
 </head>
@@ -223,13 +274,36 @@
 </main>
 
 <footer>
+  <div class="wrap">
     <div class="foot-grid">
-     <div>
-       <div class="foot-brand" style="font-size:1rem;"><a>© 2026 ExitLeft Productions Pty Ltd</a></div> <br>
-       <div class="foot-social">
-       <div class="foot-brand"> <a href="https://exitleftshows.com/shows/privacy.html">Privacy </a></div>
+      <div>
+        <div class="foot-brand">ExitLeft Productions</div>
+        <p style="margin-top:8px;">Level 1, 46 Murray Street, Hobart TAS 7000<br>
+         Email: <a href="mailto:info@exitleft.com.au">info@exitleft.com.au</a>  |  Phone: <a href="tel:+61408145898">0408 145 898</a></p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/exitlefttasmania/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/exitlefttasmania/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@exitleft" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.youtube.com/user/ExitLeft1000" target="_blank" rel="noopener">YouTube</a>
+        </div>
       </div>
-     </div>
+      <div>
+        <p style="margin-top:8px;">ExitLeft’s training arm offers students from<br> birth to 18 years the opportunity to develop <br>performing arts skills through term-time <br>classes, workshops and holiday programs.</p>
+        <p style="margin-top:8px;">ㅤㅤㅤㅤㅤ</p>
+        <a class="footer-cta" href="https://www.exitleft.com.au/">Enquire today</a>
+      </div>
+    </div>
+
+      <div class="foot-legal">
+    </div>
+
+    <div class="foot-brand">
+      <div class="foot-grid">
+        <div><a href="shows/privacy.html">Privacy</a></div>
+        <div>© 2026 ExitLeft Productions Pty Ltd</div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
